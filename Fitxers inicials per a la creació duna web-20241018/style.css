@@ -1,72 +1,137 @@
-/* styles.css */
-
 /* Reset de marges i padding */
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: rgb(246, 243, 243);
+}
+
+/* Estils Header */
+header {
+    padding: 60px;
+    text-align: center;
+    background-image: url(Fotos/restaurante-peq.jpg);
+    background-size: cover;
+}
+
+header h1 {
+    font-size: 40px;
+    margin: 0 0 20px; /* Corrige el formato de margin */
+}
+
+header p {
+    margin: 0 0 10px; /* Corrige el formato de margin */
+}
+
+header div {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
 }
 
 /* Estils per a la navbar */
-nav {
-    background-color: #f8f9fa;
-    padding: 15px;
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+.navbar {
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    background-color: rgb(24, 80, 234);
 }
 
-nav ul li {
-    margin: 0 20px;
-}
-
-nav ul li a {
+.navbar a {
+    color: #ffffff;
+    padding: 25px 25px;
     text-decoration: none;
-    color: #333;
-    font-weight: bold;
+    font-size: 17px;
+    text-align: center;
 }
 
-nav ul li a:hover {
-    color: #007bff;
+/* Quan passa el ratolí per sobre */
+.navbar a:hover {
+    background: #ddd;
+    color: rgb(24, 80, 234);
 }
 
-/* Estils per al contenidor principal */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+@media screen and (max-width: 700px) {
+    nav, .row {
+        flex-direction: column;
+    }  
 }
 
-/* Estils per a les files i columnes */
 .row {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    margin-bottom: 20px;
 }
 
-.col {
-    flex: 1;
-    min-width: 300px;
-    margin: 10px;
+aside {
+    flex: 25%;
     padding: 20px;
-    background-color: #f1f1f1;
-    border-radius: 8px;
+    background-color: rgb(114, 202, 250);
 }
 
-/* Estils per a títols i paràgrafs */
-h1, h2 {
-    color: #333;
+img {
+    flex: 1 1 auto;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
+/* Main styles */
+.main {
+    flex: 75%;
+    background-color: #ddd;;
+}
+
+h2 {
+    text-align: center;
+    font-size: 35px;
+    text-decoration: underline;
+}
+
+h3 {
+    text-align: center;
+    font-size: 25px;
+}
 p {
-    color: #666;
+    text-align: center;
+    font-size: 17px;
+    padding: 10px;
+}
+.image-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+.image-wrapper {
+    position: relative;
+    flex: 1;
+}
+.image-wrapper img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.recuadro {
+    border: 2px solid;
+    padding: 5px;
+    margin: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.footer {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: rgb(240, 240, 240);
+    background-color: rgb(24, 80, 234);
+    text-align: center;
+    padding: 3px;
 }
